@@ -1,0 +1,19 @@
+<div>
+  <h3>Add new story</h3>
+  <form method="post" [formGroup]="storyForm" (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" name="title" formControlName="title" placeholder="Title"/>
+    </div>
+    <div class="form-group">
+      <label>Author</label>
+      <input type="text" class="form-control" name="title" formControlName="user" placeholder="Username"/>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" name="title" formControlName="description" placeholder="Description"/>
+    </div>
+    <button type="submit" class="btn btn-info">Post</button>
+  </form>  
+</div>
+<pre>{{storyForm.value | json}}</pre>
